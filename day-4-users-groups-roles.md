@@ -4,7 +4,7 @@
 A user is anyone who can log into the ServiceNow platform.
 
 ### Example:
-- `siva.chandu@example.com`
+- `sivasankarchandu@gmail.com`
 
 Users are stored in the **sys_user** table.
 
