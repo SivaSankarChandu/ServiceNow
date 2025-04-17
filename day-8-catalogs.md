@@ -27,3 +27,15 @@ Detailed view of backend technical components:
 - Enhanced user experience
 
 ---
+
+CATALOGS OVERVIEW
+┌───────────────────────┐
+│  🛒 Service Catalog    │ → Employee-facing requests
+├───────────────────────┤
+│  📚 Resource Catalog   │ → IT's pool of assets
+├───────────────────────┤
+│  🔧 Technical Catalog  │ → Behind-the-scenes services
+└───────────────────────┘
+             ↓
+    Enables automation, visibility,
+     and faster service delivery.
