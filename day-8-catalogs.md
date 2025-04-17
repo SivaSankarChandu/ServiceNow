@@ -27,7 +27,7 @@ Detailed view of backend technical components:
 - Enhanced user experience
 
 ---
-
+'''
 📦 Catalogs in ITSM (ServiceNow)
 ┌──────────────────────────────┐
 │ 🛒 Service Catalog           │ → Employee-facing requests
@@ -39,3 +39,4 @@ Detailed view of backend technical components:
               ↓
      Enables Automation, Visibility,
      and Faster Service Delivery.
+'''
