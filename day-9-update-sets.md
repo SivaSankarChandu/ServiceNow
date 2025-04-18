@@ -45,7 +45,7 @@ Using Update Sets ensures a reliable and repeatable process for:
 
 ---
 
-## 🔄 Dev to Prod Lifecycle Diagram (Mermaid)
+## 🔄 Dev to Prod Lifecycle Diagram 
 
 ```mermaid
 flowchart LR
