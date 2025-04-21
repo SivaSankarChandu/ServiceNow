@@ -1,47 +1,43 @@
-# 📊 ITSM Simplified – Illustrated Guide for Beginners
+# 🧰 ITSM for Beginners – Illustrated Walkthrough
 
-This mini-project presents a **comic-style visual** that explains the basics of ITSM using a real-world scenario.
-
----
-
-## 🖼️ Visual Overview
-
-![ITSM Comic Infographic](path-to-your-image.png)
+Welcome! This project uses a **comic-style visual** to explain IT Service Management (ITSM) in the simplest way possible. Perfect for newcomers, trainees, and non-technical stakeholders.
 
 ---
 
-## 🔍 The 3-Step Breakdown
+## 🎨 Visual Breakdown (3-Panel Summary)
 
-| Step | Description |
-|------|-------------|
-| **1. Request** | User reports an issue: *"My laptop crashed!"* |
-| **2. Process** | IT checks, prioritizes, and assigns a task |
-| **3. Outcome** | Issue is resolved: *"Fixed in 2 hours!"* 🎉 |
+**1. Request** – User reports: *"My laptop crashed!"*  
+**2. Process** – IT logs, prioritizes, and investigates via ServiceNow  
+**3. Outcome** – Resolution delivered: *"Fixed in 2 hours!"* ✅
 
 ---
 
-## 🧠 Related ITSM Concepts
+## 🧠 Key Concepts Simplified
 
-- **Incident** = Emergency fix (🔔 IT 911)  
-- **Problem** = Root cause analysis (🔍 detective work)  
-- **Change** = Scheduled upgrades (📅 planning)
-
----
-
-## ✅ Why This Matters
-
-This visual helps:
-- Non-technical users understand how IT support works  
-- New hires or interns get familiar with ITIL terms  
-- Trainers simplify ITSM during onboarding sessions
+| Term      | Meaning                        | Analogy                      |
+|-----------|--------------------------------|------------------------------|
+| Incident  | IT emergency                   | Like calling 911 🚨          |
+| Problem   | Root cause investigation       | Playing IT detective 🔍      |
+| Change    | Scheduled upgrade/improvement  | Planned menu update 📅       |
 
 ---
 
-## 🎯 Use Case
+## 📌 Use Case
 
-> **Audience:** Beginners, students, support staff  
-> **Goal:** Explain ITSM in a relatable, visual way  
-> **Tools:** ServiceNow, ITIL framework  
+This visual is ideal for:
+- Onboarding IT support staff  
+- Training sessions on ITIL & ServiceNow  
+- Explaining ITSM to business units  
+- Simplifying workflows for documentation or presentations  
 
 ---
 
+## 📊 Mermaid Diagram – Basic ITSM Use Case Flow
+
+```
+flowchart TD
+    A[User Reports Issue] --> B[Incident Created in ServiceNow]
+    B --> C[IT Assesses & Prioritizes]
+    C --> D[Assigned to Technician]
+    D --> E[Issue Resolved]
+    E --> F[User Informed + SLA Met ✅]
