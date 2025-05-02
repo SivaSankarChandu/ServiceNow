@@ -1,61 +1,58 @@
-````markdown
-# 🔒 ServiceNow onCellEdit Script – Prevent Unauthorized Inline Edits
+# 🔒 ServiceNow onCellEdit – Prevent Unauthorized Inline Edits
 
 ## 📘 Scenario: Block List View Edits for Unauthorized Users
 
-This `onCellEdit` client script is designed to **prevent users from editing records directly from list views** in ServiceNow. Instead of applying the change, the script cancels the edit and displays an alert.
+This `onCellEdit` client script helps prevent users from editing records directly in **list view**. It alerts the user and cancels the edit operation, protecting the data from unauthorized changes.
 
 ---
 
 ## 💡 Use Case
 
-In some environments, you may want to block inline edits for certain users (e.g., interns, contractors, or read-only roles) to prevent accidental or unauthorized changes in list view.
+In many enterprise ServiceNow environments, not all users should be allowed to perform **inline edits** directly from the list view.
+
+For example:
+- **Interns** or **trainees** should only have view access.
+- **Contractors** should update data only through forms with validations.
+- **Auditors** may have read-only roles but access to lists.
+
+Using this script, you can cancel list cell edits and notify the user.
 
 ---
 
-## 🧠 Script
+## 💻 Script
 
 ```javascript
 function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
   var saveAndClose = false;
-  // Block the edit and notify the user
+  // Show alert and cancel the edit
   alert("You don't have access to edit data");
   callback(saveAndClose);
 }
-````
 
----
 
-## ⚙️ How It Works
+⚙️ How It Works
+This script is triggered when a user makes an edit in a list view cell.
 
-* Triggered when a user edits a cell in an editable list.
-* Displays an **alert message** to the user.
-* Prevents the update from being saved (`saveAndClose = false`).
-* Can be extended to include role-based checks using `g_user.hasRole()`.
+It sets saveAndClose = false, which tells ServiceNow not to save the changes.
 
----
+The user sees an alert and their edit is discarded.
 
-## ✅ Benefits
+✅ Benefits
+Prevents unauthorized changes directly from list views.
 
-* Ensures data integrity by reducing unauthorized edits.
-* Prevents inline updates without changing form-level permissions.
-* Simple and effective client-side control.
+Easy to implement and lightweight.
 
----
+Useful for environments where strict data control is required.
 
-## 📌 Notes
+📌 Notes
+This is a client-side script. It doesn’t rely on GlideRecord or server calls.
 
-* This script only works in editable **list views** (not on forms).
-* For more advanced restrictions, consider combining with server-side logic or ACLs.
+You can enhance it to check roles using g_user.hasRole('role_name').
 
----
+🔗 Related Topics
+onCellEdit vs onChange
 
-## 🧩 Optional Enhancements
+Restricting field-level access with ACLs
 
-You can expand this logic to:
+Using UI Policies for form-level restrictions
 
-* Allow edits only for users with specific roles.
-* Restrict edits to specific tables or fields.
-* Display a custom modal or UI message instead of `alert()`.
-
----
