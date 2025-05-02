@@ -28,7 +28,7 @@ function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
   alert("You don't have access to edit data");
   callback(saveAndClose);
 }
-
+```
 
 ⚙️ How It Works
 This script is triggered when a user makes an edit in a list view cell.
