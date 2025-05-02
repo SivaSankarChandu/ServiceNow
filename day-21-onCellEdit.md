@@ -30,29 +30,40 @@ function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
 }
 ```
 
-⚙️ How It Works
+---
+
+## ⚙️ How It Works
+
 This script is triggered when a user makes an edit in a list view cell.
 
 It sets saveAndClose = false, which tells ServiceNow not to save the changes.
 
 The user sees an alert and their edit is discarded.
 
-✅ Benefits
+---
+
+## ✅ Benefits
+
 Prevents unauthorized changes directly from list views.
 
 Easy to implement and lightweight.
 
 Useful for environments where strict data control is required.
 
-📌 Notes
+---
+
+## 📌 Notes
+
 This is a client-side script. It doesn’t rely on GlideRecord or server calls.
 
 You can enhance it to check roles using g_user.hasRole('role_name').
 
-🔗 Related Topics
+---
+
+## 🔗 Related Topics
+
 onCellEdit vs onChange
 
 Restricting field-level access with ACLs
 
 Using UI Policies for form-level restrictions
-
