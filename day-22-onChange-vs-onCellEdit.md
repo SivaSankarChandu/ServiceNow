@@ -29,19 +29,19 @@ function onChange(control, oldValue, newValue, isLoading) {
 ```
 ---
 
-🖱️ onCellEdit Client Script
-⚙️ Trigger
+## 🖱️ `onCellEdit` Client Script
+### ⚙️ Trigger
 Fires when a field is edited directly in the list (grid) view.
 
-📍 Behavior
+### 📍 Behavior
 Runs only in the list view, not on the form.
 
-🛠️ Common Use Cases
+### 🛠️ Common Use Cases
 👉 Preventing unauthorized inline edits
 
 👉 Real-time validation of grid edits
 
-💡 Example
+### 💡 Example
 ```
 function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
   var saveAndClose = false;
@@ -49,12 +49,12 @@ function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
   callback(saveAndClose);
 }
 ```
-⚠️ Key Difference
+## ⚠️ Key Difference
 Feature	onChange	onCellEdit
 Scope	Form view	List (grid) view
 Trigger	Field value changes on blur	Field edited in list
 Use Cases	Dynamic UI, validation, show/hide	Block unauthorized list edits
 
-✅ Conclusion
+## ✅ Conclusion
 Choose the right client script based on your use case.
 Let the platform work smart 💡
