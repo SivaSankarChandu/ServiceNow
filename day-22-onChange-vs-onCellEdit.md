@@ -18,7 +18,7 @@ Executes **when the user changes a field** and **moves the focus away** (blur ev
 - 👉 Auto-populating related values
 
 ### 💡 Example
-```javascript
+```
 function onChange(control, oldValue, newValue, isLoading) {
   if (isLoading || newValue === '') return;
 
@@ -26,7 +26,7 @@ function onChange(control, oldValue, newValue, isLoading) {
     gForm.setVisible('resolution_code', true);
   }
 }
-
+```
 ---
 
 🖱️ onCellEdit Client Script
@@ -42,13 +42,13 @@ Runs only in the list view, not on the form.
 👉 Real-time validation of grid edits
 
 💡 Example
-
+```
 function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
   var saveAndClose = false;
   alert("You don't have access to edit data.");
   callback(saveAndClose);
 }
-
+```
 ⚠️ Key Difference
 Feature	onChange	onCellEdit
 Scope	Form view	List (grid) view
