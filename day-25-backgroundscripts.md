@@ -43,20 +43,19 @@ Update all **Incident** records in "New" state that were created over 7 days ago
 ```javascript
 
 var gr = new GlideRecord('incident');
-
 gr.addQuery('state', 1); // New
 
-gr.addQuery('sys_created_on', '<javascript:gs.daysAgoStart(7)');
+// Get the date 7 days ago
+var sevenDaysAgo = gs.daysAgoStart(7);
+gr.addQuery('sys_created_on', '<', sevenDaysAgo);
 
 gr.query();
 
 while (gr.next()) {
-
   gr.state = 2; // In Progress
-
   gr.update();
-
 }
+```
 
 ⚠️ Caution
 
